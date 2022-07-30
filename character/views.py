@@ -1,8 +1,12 @@
-from django.shortcuts import render
-from requests import request
+from django.views.generic import TemplateView  # Generic class based view
+
 
 # Create your views here.
 
 
-def home(request):
-    return render("home.html")
+class home(TemplateView):
+    template_name = "home.html"
+
+
+class About(TemplateView):
+    template_name = "about.html"
